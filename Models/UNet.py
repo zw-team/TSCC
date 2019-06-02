@@ -93,9 +93,9 @@ class Decoder(nn.Module):
         return self.Reinforcement_Branch_Block_3(concat_3)
         
         
-class W_Net(nn.Module):
+class UNet(nn.Module):
     def __init__(self, pretrain=True):
-        super(W_Net, self).__init__()
+        super(UNet, self).__init__()
         self.encoder = Encoder(pretrain)
         self.decoder = Decoder()
         self.output_layer = nn.Sigmoid()
